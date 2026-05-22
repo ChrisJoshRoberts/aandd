@@ -1,20 +1,19 @@
-
-import Link from "next/link";
 import { getPageTestimonials } from "@/sanity/lib/fetch";
 import { Testimonial } from "@/types/types";
+import Link from "next/link";
 
-export default async function Home() {
-  const testimonials = await getPageTestimonials('home');
+export default async function webDesignPage() {
+  const testimonials = await getPageTestimonials('web-design');
   return (
     <div>
-      <h1>Home Page</h1>
+      <h1>Web Design Page</h1>
       {testimonials.map((testimonial: Testimonial) => (
         <div key={testimonial._id}>
           <h2>{testimonial.name}</h2>
           <p>{testimonial.testimonial}</p>
         </div>
       ))}
-      <Link href="/web-design">Web Design Page</Link>
+      <Link href="/">Home Page</Link>
     </div>
   );
 }

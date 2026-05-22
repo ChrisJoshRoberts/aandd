@@ -23,5 +23,12 @@ export default defineType({
       type: 'text',
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: 'pages',
+      title: 'Pages',
+      description: 'Pages this testimonial should appear on',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'page' }] }],
+    }),
   ]
 });
