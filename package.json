@@ -1,0 +1,22 @@
+{
+  "name": "aandd",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace frontend\" \"npm run dev --workspace studio\"",
+    "build": "npm run build --workspace frontend && npm run build --workspace studio",
+    "clean" : "rm -rf node_modules **/node_modules"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "workspaces": [
+    "frontend",
+    "studio"
+  ],
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
