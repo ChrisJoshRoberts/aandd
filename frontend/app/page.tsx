@@ -14,6 +14,7 @@ export default async function Home() {
           <p>{testimonial.testimonial}</p>
         </div>
       ))}
+      {/* add */}
       <Link href="/web-design">Web Design Page</Link>
     </div>
   );
