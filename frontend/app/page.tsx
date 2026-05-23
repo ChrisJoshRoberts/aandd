@@ -8,14 +8,6 @@ export default async function Home() {
   return (
     <div>
       <h1>Home Page</h1>
-      {testimonials.map((testimonial: Testimonial) => (
-        <div key={testimonial._id}>
-          <h2>{testimonial.name}</h2>
-          <p>{testimonial.testimonial}</p>
-        </div>
-      ))}
-      {/* add */}
-      <Link href="/web-design">Web Design Page</Link>
     </div>
   );
 }

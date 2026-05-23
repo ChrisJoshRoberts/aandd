@@ -3,6 +3,22 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-lemon: #FAFF29;
+  --color-lemon-medium: #969919;
+  --color-lemon-light: #FEFFD4;
+  --color-aubergine: #2B0D49;
+  --color-aubergine-medium: #806E92;
+  --color-aubergine-light: #D5CFDB;
+  --color-fuchsia: #FF60E7;
+  --color-fuchsia-medium: #FFA0F1;
+  --color-fuchsia-light: #FFDFFA;
+  --color-cloud: #FCFCFC;
+  --color-cloud-medium: #CACACA;
+  --color-cloud-dark: #323232;
+  --color-minneola: #FF4600;
+  --color-minneola-medium: #FF9066;
+  --color-minneola-light: #FFDACC;
+
 }
 
 @theme inline {
