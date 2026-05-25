@@ -1,13 +1,16 @@
 
-import Link from "next/link";
+
 import { getPageTestimonials } from "@/sanity/lib/fetch";
 import { Testimonial } from "@/types/types";
+import HomeHeroSection from "./components/sections/HomeHeroSection/HomeHeroSection";
+import Navbar from "./components/UI/navbar/Navbar";
 
 export default async function Home() {
   const testimonials = await getPageTestimonials('home');
   return (
-    <div>
-      <h1>Home Page</h1>
-    </div>
+    <>
+    <Navbar />
+    <HomeHeroSection />
+    </>
   );
 }
