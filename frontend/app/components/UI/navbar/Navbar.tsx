@@ -1,10 +1,24 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./navbar.module.css";
-import { Button, Dropdown } from "@heroui/react";
+import { Button, Dropdown, Label } from "@heroui/react";
+import { ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 export default function Navbar() {
   const freeConsultLink = "/contact";
+  const [isOpen, setIsOpen] = useState(false);
+
+  enum Services {
+    WebDesignDevelopment = "Web Design & Development",
+    BrandingVisualIdentity = "Branding & Visual Identity",
+    HubSpotConsultingAutomation = "HubSpot consulting and automation",
+    ContentMarketing = "Content marketing",
+    SalesEnablementMaterials = "Sales enablement materials",
+    SocialMediaManagement = "Social media management", 
+  }
+
   return (
     <nav className={styles.navbar}>
       <Link href="/">
@@ -16,11 +30,38 @@ export default function Navbar() {
           height={80}
         />
       </Link>
-      <div>
-        <Dropdown>
-          <Button className={styles.button}>Services</Button>
+      <div className={styles.navLinks}>
+        <Dropdown isOpen={isOpen} onOpenChange={setIsOpen}>
+          <Button
+            className={`${styles.dropdownButton} ${isOpen ? styles.activeDropdownButton : ""}`}
+          >
+            Services{" "}
+            <ChevronDown
+              className={`${styles.chevron} ${isOpen ? styles.rotate : ""}`}
+            />
+          </Button>
+          <Dropdown.Popover style={{marginTop: 24}}>
+            <Dropdown.Menu className={styles.dropdownMenu}>
+              {Object.values(Services).map((service) => (
+                <Dropdown.Item key={service} className={styles.dropdownItem}>
+                  <Label className={styles.dropdownLabel}>{service}</Label>
+                </Dropdown.Item>
+              ))}
+            </Dropdown.Menu>
+          </Dropdown.Popover>
         </Dropdown>
-        <Link href={freeConsultLink}>Free Consultation</Link>
+        <Link href="/case-studies" className={styles.navLink}>
+          Case Studies
+        </Link>
+        <Link href="/resources" className={styles.navLink}>
+          Resources
+        </Link>
+        <Link href="/about" className={styles.navLink}>
+          About Us
+        </Link>
+        <Link href={freeConsultLink} className={styles.button}>
+          Free Consultation
+        </Link>
       </div>
     </nav>
   );
