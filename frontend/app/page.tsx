@@ -9,6 +9,9 @@ export default async function Home() {
     <>
     <Navbar />
     <HomeHeroSection />
+    <div style={{height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'var(--color-cloud)'}}>
+      <h2 style={{fontSize: '3rem', color: 'var(--color-aubergine)', fontFamily: 'var(--font-josefin-sans)'}}>Testimonials coming soon...</h2>
+    </div>
     </>
   );
 }

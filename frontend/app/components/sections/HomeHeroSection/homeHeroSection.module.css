@@ -2,4 +2,26 @@
   background: color-mix(in oklch, var(--color-aubergine), white 85%);
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 100px 100px;
+}
+.homeHeroTitle {
+  font-size: 6rem;
+  font-family: var(--font-josefin-sans);
+  text-align: center;
+  color: var(--color-aubergine);
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -5px;
+}
+.homeHeroDescription {
+  font-size: 1rem;
+  font-family: var(--font-josefin-sans);
+  text-align: center;
+  color: var(--color-aubergine);
+  max-width: 600px;
+  opacity: 0.4;
 }
