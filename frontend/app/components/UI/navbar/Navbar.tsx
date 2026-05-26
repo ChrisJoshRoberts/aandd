@@ -5,6 +5,7 @@ import styles from "./navbar.module.css";
 import { Button, Dropdown, Label } from "@heroui/react";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
+import buttonStyles from "../../../design-system/buttonStyles.module.css";
 
 export default function Navbar() {
   const freeConsultLink = "/contact";
@@ -59,7 +60,7 @@ export default function Navbar() {
         <Link href="/about" className={styles.navLink}>
           About Us
         </Link>
-        <Link href={freeConsultLink} className={styles.button}>
+        <Link href={freeConsultLink} className={buttonStyles.button}>
           Free Consultation
         </Link>
       </div>

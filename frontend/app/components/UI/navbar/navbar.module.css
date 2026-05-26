@@ -14,6 +14,11 @@
   border-radius: 100px;
   margin-top: 2rem;
   backdrop-filter: blur(7.5px);
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #ffffff74;
+  }
 }
 .navLinks {
   display: flex;
@@ -26,23 +31,10 @@
   color: var(--color-aubergine);
   transition: all 0.2s ease-in-out;
   padding: 6px 16px;
-
-  &:hover {
-    color: #462a60;
-  }
-}
-.button {
-  background: var(--color-aubergine);
-  color: #ffffff;
-  font-weight: 500;
-  font-size: 1rem;
-  padding: 6px 16px;
-  border-radius: 100px;
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    background: #462a60;
-    color: #ffffff;
+    color: var(--color-minneola);
   }
 }
 .dropdownButton {
