@@ -1,5 +1,6 @@
 import { getPageTestimonials } from "@/sanity/lib/fetch";
-import HomeHeroSection from "./components/sections/HomeHeroSection/HomeHeroSection";
+import HomeHeroSection from "./components/sections/homeSections/HomeHeroSection/HomeHeroSection";
+import HomeServiceSection from "./components/sections/homeSections/HomeServicesSection/HomeServiceSection";
 
 export default async function Home() {
   const testimonials = await getPageTestimonials("home");
@@ -7,6 +8,7 @@ export default async function Home() {
   return (
     <>
       <HomeHeroSection />
+      <HomeServiceSection />
       <div
         style={{
           height: "100vh",
