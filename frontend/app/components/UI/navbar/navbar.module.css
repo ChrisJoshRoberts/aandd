@@ -6,9 +6,10 @@
   position: fixed;
   top: 0;
   left: 50%;
+  z-index: 1000;
   transform: translateX(-50%);
   width: 80%;
-  background-color: #4d33673d;
+  background-color: #ffffff3d;
   padding: 4px 24px;
   border-radius: 100px;
   margin-top: 2rem;
@@ -58,6 +59,10 @@
 .dropdownMenu {
   background: #4d33673d;
   backdrop-filter: blur(7.5px);
+}
+.dropdownItem {
+  padding: 6px 16px;
+  font-family: var(--font-josefin-sans);
 }
 .dropdownItem:hover {
   background: #462a6040;

@@ -1,4 +1,6 @@
+
 .homeHeroSection {
+  position: relative;
   background: color-mix(in oklch, var(--color-aubergine), white 85%);
   width: 100%;
   height: 100vh;
@@ -6,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 0 0 100px 100px;
+  gap: 16px;
 }
 .homeHeroTitle {
   font-size: 6rem;
@@ -24,4 +26,12 @@
   color: var(--color-aubergine);
   max-width: 600px;
   opacity: 0.4;
+}
+.roundedHeroBottom {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% 1083px - 40px);
+  z-index: 2;
+  transform-origin: 0 100%;
+  will-change: transform;
 }

@@ -1,0 +1,14 @@
+.button {
+  background: var(--color-aubergine);
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 6px 16px;
+  border-radius: 100px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: #462a60;
+    color: #ffffff;
+  }
+}
