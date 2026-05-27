@@ -27,12 +27,11 @@ export default function Navbar() {
 
   useGSAP(
     () => {
-      gsap.from(navBar.current, {
-        y: -300,
-        duration: 0.6,
-        ease: "power3.out",
-        delay: 0.2,
-      });
+      gsap.fromTo(
+        navBar.current,
+        { y: -300, autoAlpha: 0 },
+        { y: 0, autoAlpha: 1, duration: 0.6, ease: "power3.out", delay: 0.2 },
+      );
     },
     { scope: navBar },
   );

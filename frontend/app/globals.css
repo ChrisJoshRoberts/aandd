@@ -1,25 +1,28 @@
 @import "tailwindcss";
-@import "@heroui/styles"; 
+@import "@heroui/styles";
+
+* {
+  cursor: none;
+}
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --color-lemon: #FAFF29;
+  --color-lemon: #faff29;
   --color-lemon-medium: #969919;
-  --color-lemon-light: #FEFFD4;
-  --color-aubergine: #2B0D49;
-  --color-aubergine-medium: #806E92;
-  --color-aubergine-light: #D5CFDB;
-  --color-fuchsia: #FF60E7;
-  --color-fuchsia-medium: #FFA0F1;
-  --color-fuchsia-light: #FFDFFA;
-  --color-cloud: #FCFCFC;
-  --color-cloud-medium: #CACACA;
+  --color-lemon-light: #feffd4;
+  --color-aubergine: #2b0d49;
+  --color-aubergine-medium: #806e92;
+  --color-aubergine-light: #d5cfdb;
+  --color-fuchsia: #ff60e7;
+  --color-fuchsia-medium: #ffa0f1;
+  --color-fuchsia-light: #ffdffa;
+  --color-cloud: #fcfcfc;
+  --color-cloud-medium: #cacaca;
   --color-cloud-dark: #323232;
-  --color-minneola: #FF4600;
-  --color-minneola-medium: #FF9066;
-  --color-minneola-light: #FFDACC;
-
+  --color-minneola: #ff4600;
+  --color-minneola-medium: #ff9066;
+  --color-minneola-light: #ffdacc;
 }
 
 @theme inline {

@@ -21,20 +21,20 @@ export default function HomeHeroSection() {
   useGSAP(
     () => {
       const letters = gsap.utils.toArray<HTMLElement>(".letter");
-      gsap.from(letters, {
-        y: 200,
+      gsap.to(letters, {
+        y: 0,
         duration: 0.6,
         ease: "power3.out",
         stagger: 0.03,
         delay: 0.2,
       });
-      gsap.from(heroTextRef.current, {
-        y: 50,
-        opacity: 0,
+      gsap.to(heroTextRef.current, {
+        y: 0,
+        opacity: 1,
         duration: 0.6,
         ease: "power3.out",
         delay: 0.8,
-      })
+      });
       gsap.fromTo(
         roundedHeroBottomRef.current,
         {
@@ -83,6 +83,7 @@ export default function HomeHeroSection() {
                       style={{
                         display: "inline-block",
                         whiteSpace: "pre",
+                        transform: "translateY(200px)",
                       }}
                     >
                       {letter}
@@ -100,7 +101,13 @@ export default function HomeHeroSection() {
                     paddingBottom: "0.1em",
                   }}
                 >
-                  <span className="letter" style={{ display: "inline-block" }}>
+                  <span
+                    className="letter"
+                    style={{
+                      display: "inline-block",
+                      transform: "translateY(200px)",
+                    }}
+                  >
                     {"\u00A0"}
                   </span>
                 </span>
@@ -110,7 +117,11 @@ export default function HomeHeroSection() {
           );
         })}
       </h1>
-      <div ref={heroTextRef} className={styles.homeHeroText}>
+      <div
+        ref={heroTextRef}
+        className={styles.homeHeroText}
+        style={{ opacity: 0, transform: "translateY(50px)" }}
+      >
         <p className={styles.homeHeroDescription}>
           We help brands achieve clarity, confidence, and creativity through
           expert digital marketing and design solutions that deliver real

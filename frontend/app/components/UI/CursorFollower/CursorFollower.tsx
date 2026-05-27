@@ -2,6 +2,8 @@
 
 import { useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import styles from "./CursorFollower.module.css";
+import Image from "next/image";
 
 export default function CursorFollower() {
   // raw mouse position
@@ -37,10 +39,12 @@ export default function CursorFollower() {
       style={{
         x,
         y,
-        background: "var(--color-minneola)",
+        // background: "var(--color-minneola)",
         zIndex: 9999,
       }}
-      className="pointer-events-none fixed top-0 left-0 h-6 w-6 rounded-full "
-    />
+      className={styles.cursorFollower}
+    >
+      <Image src="/assets/aandd-icon.png" alt="Cursor Follower" width={100} height={100} />
+    </motion.div>
   );
 }

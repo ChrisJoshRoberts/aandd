@@ -14,6 +14,7 @@
   border-radius: 100px;
   margin-top: 2rem;
   backdrop-filter: blur(7.5px);
+  visibility: hidden;
   transition: background-color 0.3s ease-in-out;
 
   &:hover {
@@ -58,11 +59,10 @@
 }
 .dropdownItem:hover {
   background: #462a6040;
-  
+
   * {
     color: #ffffff;
   }
-  
 }
 .dropdownLabel {
   color: var(--color-aubergine);
