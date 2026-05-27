@@ -1,12 +1,12 @@
 .button {
   background: var(--color-aubergine);
   color: #ffffff;
-  font-weight: 500;
+  font-weight: 900;
   font-size: 1rem;
   padding: 6px 16px;
   border-radius: 100px;
   transition: all 0.2s ease-in-out;
-  font-family: var(--font-josefin-sans);
+  font-family: Roboto, sans-serif;
 
   &:hover {
     background: var(--color-minneola);

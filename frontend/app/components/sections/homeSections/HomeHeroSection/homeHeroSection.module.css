@@ -8,6 +8,23 @@
   justify-content: center;
   align-items: center;
   gap: 16px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/assets/hero-background.png");
+    background-size: cover;
+    background-position: center;
+    mix-blend-mode: screen;
+    opacity: 0.2;
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
 }
 .homeHeroTitle {
   font-size: 6rem;
@@ -37,6 +54,14 @@
 .homeHeroButton {
   background: var(--color-minneola) !important;
   transform: scale(1.05);
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    background: var(--color-aubergine) !important;
+  }
 }
 .highlight {
   color: var(--color-minneola);
@@ -45,7 +70,6 @@
 .iconWrapper {
   display: inline-flex;
   vertical-align: middle;
-
 
   img {
     background: var(--color-cloud);
