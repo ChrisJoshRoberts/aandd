@@ -29,7 +29,6 @@ export default function HomeHeroSection() {
             start: "top top",
             end: "bottom 60%",
             scrub: true,
-            markers: true,
           },
         },
       );

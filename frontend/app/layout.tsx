@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/UI/navbar/Navbar";
+import CursorFollower from "./components/UI/CursorFollower/CursorFollower";
 
 const josefinSans = Josefin_Sans({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
         style={{ background: "var(--color-cloud)" }}
       >
         <Navbar />
+        <CursorFollower />
         {children}
       </body>
     </html>

@@ -17,7 +17,7 @@
     background-image: url("/assets/hero-background.png");
     background-size: cover;
     background-position: center;
-    mix-blend-mode: screen;
+    mix-blend-mode: overlay;
     opacity: 0.2;
     z-index: 0;
   }
