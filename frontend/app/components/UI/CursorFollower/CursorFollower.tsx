@@ -38,8 +38,9 @@ export default function CursorFollower() {
         x,
         y,
         background: "var(--color-minneola)",
+        zIndex: 9999,
       }}
-      className="pointer-events-none fixed top-0 left-0 z-50 h-6 w-6 rounded-full"
+      className="pointer-events-none fixed top-0 left-0 h-6 w-6 rounded-full "
     />
   );
 }

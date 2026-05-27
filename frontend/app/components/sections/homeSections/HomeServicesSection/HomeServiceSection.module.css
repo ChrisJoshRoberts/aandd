@@ -1,4 +1,19 @@
 .homeServiceSection {
+  position: relative;
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  z-index: 900;
+  transform: translateY(-15rem);
   padding: 4rem 2rem;
-  background: var(--color-minneola);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.innerServiceWrapper {
+  display: flex;
+  gap: 18px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
