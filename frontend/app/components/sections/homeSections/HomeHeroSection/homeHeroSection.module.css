@@ -79,3 +79,9 @@
     box-shadow: var(--color-minneola-light) 0px 7px 29px 0px;
   }
 }
+.homeHeroText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}

@@ -4,12 +4,17 @@ import Link from "next/link";
 import styles from "./navbar.module.css";
 import { Button, Dropdown, Label } from "@heroui/react";
 import { ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import buttonStyles from "../../../design-system/buttonStyles.module.css";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
+gsap.registerPlugin(useGSAP);
 
 export default function Navbar() {
   const freeConsultLink = "/contact";
   const [isOpen, setIsOpen] = useState(false);
+  const navBar = useRef<HTMLElement>(null);
 
   enum Services {
     WebDesignDevelopment = "Web Design & Development",
@@ -17,11 +22,23 @@ export default function Navbar() {
     HubSpotConsultingAutomation = "HubSpot consulting and automation",
     ContentMarketing = "Content marketing",
     SalesEnablementMaterials = "Sales enablement materials",
-    SocialMediaManagement = "Social media management", 
+    SocialMediaManagement = "Social media management",
   }
 
+  useGSAP(
+    () => {
+      gsap.from(navBar.current, {
+        y: -300,
+        duration: 0.6,
+        ease: "power3.out",
+        delay: 0.2,
+      });
+    },
+    { scope: navBar },
+  );
+
   return (
-    <nav className={styles.navbar}>
+    <nav ref={navBar} className={styles.navbar}>
       <Link href="/">
         <Image
           loading="eager"
@@ -41,7 +58,7 @@ export default function Navbar() {
               className={`${styles.chevron} ${isOpen ? styles.rotate : ""}`}
             />
           </Button>
-          <Dropdown.Popover style={{marginTop: 24}}>
+          <Dropdown.Popover style={{ marginTop: 24 }}>
             <Dropdown.Menu className={styles.dropdownMenu}>
               {Object.values(Services).map((service) => (
                 <Dropdown.Item key={service} className={styles.dropdownItem}>
