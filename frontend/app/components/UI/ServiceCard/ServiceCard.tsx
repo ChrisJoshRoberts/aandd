@@ -31,7 +31,7 @@ export default function ServiceCard({ service }: { service: Service }) {
       >
         <CircleArrowOutUpRight
           size={44}
-          color="var(--color-aubergine)"
+          color={isCardHovered ? "var(--color-minneola)" : "var(--color-aubergine"}
           strokeWidth={2}
         />
       </div>

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import gsap from "gsap";
 import styles from "./HomeServiceSection.module.css";
 import { useRef } from "react";
@@ -17,22 +17,22 @@ export default function ServiceScroll({
 
   useGSAP(() => {
     if (!containerRef.current || !trackRef.current) return;
-    
+
     const ctx = gsap.context(() => {
       const track = trackRef.current!;
       const container = containerRef.current!;
-      const totalScroll = track.scrollWidth - container.offsetWidth;
 
-      gsap.to(track, {
-        x: () => `-${totalScroll}px`,
-        ease: "none",
-        scrollTrigger: {
-          trigger: container,
-          start: "top 30%",
-          end: "bottom 30%",
-          scrub: true,
-          pin: true,
-          anticipatePin: 1,
+      const getTotal = () => track.scrollWidth - container.offsetWidth;
+
+      ScrollTrigger.create({
+        trigger: container,
+        start: "top 30%",
+        end: () => `+=${getTotal()}`,
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+        onUpdate: (self) => {
+          container.scrollLeft = self.progress * getTotal();
         },
       });
     }, containerRef);
