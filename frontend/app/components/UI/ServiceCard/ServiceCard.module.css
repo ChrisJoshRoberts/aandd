@@ -40,6 +40,47 @@
     color: var(--color-aubergine);
   }
 }
+.serviceCardWrapper:nth-child(4n + 1) .serviceCard {
+  color: var(--color-aubergine);
+  background: var(--color-lemon);
+
+  &:hover {
+    transform: scale(1.03);
+    background: #fcfcfc93;
+    backdrop-filter: blur(4px);
+    color: var(--color-aubergine);
+  }
+}
+.serviceCardWrapper:nth-child(4n + 2) .serviceCard {
+  color: var(--color-aubergine);
+  background: var(--color-fuchsia);
+  &:hover {
+    transform: scale(1.03);
+    background: #fcfcfc93;
+    backdrop-filter: blur(4px);
+    color: var(--color-aubergine);
+  }
+}
+.serviceCardWrapper:nth-child(4n + 3) .serviceCard {
+  color: var(--color-cloud);
+  background: var(--color-aubergine);
+  &:hover {
+    transform: scale(1.03);
+    background: #fcfcfc93;
+    backdrop-filter: blur(4px);
+    color: var(--color-aubergine);
+  }
+}
+.serviceCardWrapper:nth-child(4n + 4) .serviceCard {
+  color: var(--color-aubergine);
+  background: var(--color-minneola);
+  &:hover {
+    transform: scale(1.03);
+    background: #fcfcfc93;
+    backdrop-filter: blur(4px);
+    color: var(--color-aubergine);
+  }
+}
 
 .serviceTitle {
   font-size: 1.5rem;
@@ -62,7 +103,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: var(--color-minneola);
+  background: var(--color-cloud);
   position: absolute;
   z-index: 901;
   top: 0px;
@@ -72,9 +113,8 @@
 }
 .serviceButtonActive {
   background: #fcfcfc93;
-    backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   transform: scale(1.4);
-
 }
 .viewMoreText {
   position: absolute;

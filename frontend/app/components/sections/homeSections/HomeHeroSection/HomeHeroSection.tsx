@@ -35,22 +35,17 @@ export default function HomeHeroSection() {
         ease: "power3.out",
         delay: 0.8,
       });
-      gsap.fromTo(
-        roundedHeroBottomRef.current,
-        {
-          scaleY: 0,
+      gsap.to(roundedHeroBottomRef.current, {
+        scaleY: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top top",
+          end: "bottom 60%",
+          scrub: true,
+          invalidateOnRefresh: true,
         },
-        {
-          scaleY: 1,
-          ease: "easeInOut",
-          scrollTrigger: {
-            trigger: container.current,
-            start: "top top",
-            end: "bottom 60%",
-            scrub: true,
-          },
-        },
-      );
+      });
     },
     { scope: container },
   );

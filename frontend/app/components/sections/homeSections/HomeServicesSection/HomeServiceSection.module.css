@@ -17,3 +17,9 @@
   padding-left: 10%;
   padding-right: 10%;
 }
+
+.innerServiceWrapper > * {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(200px);
+}

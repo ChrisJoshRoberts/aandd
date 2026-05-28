@@ -27,11 +27,11 @@ export default function ServiceCard({ service }: { service: Service }) {
         <p className={styles.serviceDescription}>{service.description}</p>
       </div>
       <div
-        className={` ${styles.serviceButton } ${isCardHovered ? styles.serviceButtonActive : ""}`}
+        className={` ${styles.serviceButton} ${isCardHovered ? styles.serviceButtonActive : ""}`}
       >
         <CircleArrowOutUpRight
           size={44}
-          color={`${isCardHovered ? "var(--color-minneola)" : "var(--color-cloud)"}`}
+          color="var(--color-aubergine)"
           strokeWidth={2}
         />
       </div>
