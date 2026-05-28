@@ -1,5 +1,10 @@
 .serviceCardWrapper {
   position: relative;
+  z-index: var(--stack-index, auto);
+  transition: z-index 0s;
+}
+.serviceCardWrapper:hover {
+  z-index: 9999;
 }
 .serviceCard {
   --r: 20px; /* the radius */
@@ -7,7 +12,8 @@
   --x: 20px; /* horizontal offset (no percentane) */
   --y: 10px; /* vertical offset (no percentage) */
 
-  min-width: 320px;
+  width: clamp(300px, 320px, 400px);
+  /* min-width: 320px; */
   min-height: 320px;
   padding: 2rem;
   /* aspect-ratio: 1; */
@@ -41,8 +47,10 @@
   }
 }
 .serviceCardWrapper:nth-child(4n + 1) .serviceCard {
+  position: relative;
   color: var(--color-aubergine);
   background: var(--color-lemon);
+  z-index: 800;
 
   &:hover {
     transform: scale(1.03);
@@ -52,6 +60,8 @@
   }
 }
 .serviceCardWrapper:nth-child(4n + 2) .serviceCard {
+  position: relative;
+  z-index: 799;
   color: var(--color-aubergine);
   background: var(--color-fuchsia);
   &:hover {
@@ -79,8 +89,24 @@
     background: #fcfcfc93;
     backdrop-filter: blur(4px);
     color: var(--color-aubergine);
+    z-index: 801;
   }
 }
+/* .serviceCardWrapper:nth-child(n + 2) {
+  transform: translateX(-100px);
+}
+.serviceCardWrapper:nth-child(n + 3) {
+  transform: translateX(-200px);
+}
+.serviceCardWrapper:nth-child(n + 4) {
+  transform: translateX(-300px);
+}
+.serviceCardWrapper:nth-child(n + 5) {
+  transform: translateX(-400px);
+}
+.serviceCardWrapper:nth-child(n + 6) {
+  transform: translateX(-500px);
+} */
 
 .serviceTitle {
   font-size: 1.5rem;

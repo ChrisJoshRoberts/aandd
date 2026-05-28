@@ -1,0 +1,5 @@
+.homeInfoSection {
+  background-color: var(--color-primary);
+  color: var(--color-aubergine);
+  height: 100vh;
+}

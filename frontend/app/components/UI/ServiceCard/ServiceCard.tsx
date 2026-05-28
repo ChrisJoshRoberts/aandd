@@ -4,7 +4,13 @@ import styles from "./ServiceCard.module.css";
 import { CircleArrowOutUpRight } from "lucide-react";
 import { useState } from "react";
 
-export default function ServiceCard({ service }: { service: Service }) {
+export default function ServiceCard({
+  service,
+  stackIndex,
+}: {
+  service: Service;
+  stackIndex?: number;
+}) {
   const [isCardHovered, setIsCardHovered] = useState(false);
 
   function revealText() {
@@ -12,7 +18,14 @@ export default function ServiceCard({ service }: { service: Service }) {
   }
 
   return (
-    <div className={styles.serviceCardWrapper}>
+    <div
+      className={styles.serviceCardWrapper}
+      style={
+        stackIndex !== undefined
+          ? ({ "--stack-index": stackIndex } as React.CSSProperties)
+          : undefined
+      }
+    >
       <div
         className={styles.serviceCard}
         onMouseEnter={revealText}
@@ -31,7 +44,9 @@ export default function ServiceCard({ service }: { service: Service }) {
       >
         <CircleArrowOutUpRight
           size={44}
-          color={isCardHovered ? "var(--color-minneola)" : "var(--color-aubergine"}
+          color={
+            isCardHovered ? "var(--color-minneola)" : "var(--color-aubergine"
+          }
           strokeWidth={2}
         />
       </div>
