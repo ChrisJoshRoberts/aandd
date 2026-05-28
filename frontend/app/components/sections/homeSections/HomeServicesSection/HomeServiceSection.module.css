@@ -19,7 +19,18 @@
 }
 
 .innerServiceWrapper > * {
+  display: flex;
+  gap: 16px;
+}
+
+.innerServiceWrapper > * > * {
   opacity: 0;
   visibility: hidden;
   transform: translateY(200px);
+}
+.serviceTitle {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  color: black;
 }
