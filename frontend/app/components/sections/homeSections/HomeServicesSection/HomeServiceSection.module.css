@@ -1,5 +1,6 @@
 .homeServiceSection {
   position: relative;
+  width: 100%;
   display: flex;
   gap: 24px;
   overflow-x: auto;
@@ -14,8 +15,7 @@
 .innerServiceWrapper {
   display: flex;
   gap: 16px;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding: 0 12%;
 }
 
 .innerServiceWrapper > * {
@@ -27,15 +27,6 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(200px);
-}
-.serviceTitleWrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 800px;
-  background: red;
 }
 .serviceTitle {
   font-size: 3rem;
@@ -53,6 +44,7 @@
   text-align: center;
 }
 .scrollSectionWrapper {
+  
   display: flex;
   flex-direction: column;
   align-items: center;

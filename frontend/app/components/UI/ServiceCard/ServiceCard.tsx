@@ -19,6 +19,8 @@ export default function ServiceCard({
 
   return (
     <div
+      onMouseEnter={revealText}
+      onMouseLeave={revealText}
       className={styles.serviceCardWrapper}
       style={
         stackIndex !== undefined
@@ -26,11 +28,7 @@ export default function ServiceCard({
           : undefined
       }
     >
-      <div
-        className={styles.serviceCard}
-        onMouseEnter={revealText}
-        onMouseLeave={revealText}
-      >
+      <div className={styles.serviceCard}>
         <p
           className={`${styles.viewMoreText} ${isCardHovered ? styles.viewMoreTextVisible : ""}`}
         >

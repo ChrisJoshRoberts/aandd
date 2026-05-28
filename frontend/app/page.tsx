@@ -10,7 +10,6 @@ export default async function Home() {
     <>
       <HomeHeroSection />
       <HomeServiceSection />
-
       <HomeInfoSection />
     </>
   );

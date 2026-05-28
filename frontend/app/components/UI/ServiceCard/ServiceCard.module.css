@@ -45,11 +45,46 @@
     backdrop-filter: blur(4px);
     color: var(--color-aubergine);
   }
+
+  &::before {
+    content: "";
+    inset: 0;
+    background-image: url("/assets/hero-background.png");
+    background-position: var(--card-bg-position, top);
+    mix-blend-mode: color-dodge;
+    opacity: 0.1;
+    position: absolute;
+    z-index: 800;
+  }
 }
-.serviceCardWrapper:nth-child(4n + 1) .serviceCard {
+.serviceCardWrapper:nth-child(1) .serviceCard::before {
+  background-position: top;
+}
+.serviceCardWrapper:nth-child(2) .serviceCard::before {
+  background-position: bottom;
+}
+.serviceCardWrapper:nth-child(3) .serviceCard::before {
+  background-position: left;
+}
+.serviceCardWrapper:nth-child(4) .serviceCard::before {
+  background-position: right;
+}
+.serviceCardWrapper:nth-child(5) .serviceCard::before {
+  background-position: center;
+}
+.serviceCardWrapper:nth-child(6) .serviceCard::before {
+  background-position: top left;
+}
+.serviceCardWrapper:nth-child(7) .serviceCard::before {
+  background-position: top right;
+}
+.serviceCardWrapper:nth-child(8) .serviceCard::before {
+  background-position: bottom left;
+}
+.serviceCardWrapper:nth-child(odd) .serviceCard {
   position: relative;
-  color: var(--color-aubergine);
-  background: var(--color-lemon);
+  color: var(--color-cloud);
+  background: var(--color-aubergine-bright);
   z-index: 800;
 
   &:hover {
@@ -59,10 +94,11 @@
     color: var(--color-aubergine);
   }
 }
+
 .serviceCardWrapper:nth-child(4n + 2) .serviceCard {
   position: relative;
   z-index: 799;
-  color: var(--color-aubergine);
+  color: var(--color-cloud);
   background: var(--color-fuchsia);
   &:hover {
     transform: scale(1.03);
@@ -82,7 +118,7 @@
   }
 }
 .serviceCardWrapper:nth-child(4n + 4) .serviceCard {
-  color: var(--color-aubergine);
+  color: var(--color-cloud);
   background: var(--color-minneola);
   &:hover {
     transform: scale(1.03);
@@ -119,7 +155,7 @@
   font-family: var(--font-josefin-sans);
   opacity: 0.8;
   margin-top: 0.5rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .serviceButton {
@@ -129,7 +165,8 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: var(--color-cloud);
+  background: #fcfcfc39;
+  backdrop-filter: blur(4px);
   position: absolute;
   z-index: 901;
   top: 0px;

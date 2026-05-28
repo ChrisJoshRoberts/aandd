@@ -27,17 +27,44 @@ export default function ServiceScroll({
 
       const getTotal = () => track.scrollWidth - container.offsetWidth;
 
-      ScrollTrigger.create({
+      // Set to true when WE write scrollLeft, so the scroll listener
+      // can distinguish programmatic updates from manual user scrolls.
+      let isProgrammaticScroll = false;
+
+      const st = ScrollTrigger.create({
         trigger: container,
         start: "top 30%",
         end: "bottom 50%",
-        scrub: 1,
+        toggleActions: "play pause resume reverse",
+        scrub: true,
         pin: true,
         anticipatePin: 1,
         onUpdate: (self) => {
+          isProgrammaticScroll = true;
           container.scrollLeft = self.progress * getTotal();
+          // Clear flag on the next frame, after the scroll event fires.
+          requestAnimationFrame(() => {
+            isProgrammaticScroll = false;
+          });
         },
       });
+
+      const onManualScroll = () => {
+        if (isProgrammaticScroll) return;
+        const total = getTotal();
+        if (total <= 0) return;
+        const progress = gsap.utils.clamp(0, 1, container.scrollLeft / total);
+        const targetY = st.start + progress * (st.end - st.start);
+        // Jump the page scroll to match the manual horizontal position
+        // so the ScrollTrigger continues from there instead of snapping back.
+        window.scrollTo({ top: targetY, behavior: "auto" });
+      };
+
+      container.addEventListener("scroll", onManualScroll, { passive: true });
+
+      return () => {
+        container.removeEventListener("scroll", onManualScroll);
+      };
     }, containerRef);
 
     return () => ctx.revert();
@@ -45,13 +72,14 @@ export default function ServiceScroll({
 
   useGSAP(
     () => {
-      if (!titleWrapperRef.current || !titleRef.current || !paraRef.current) return;
+      if (!titleWrapperRef.current || !titleRef.current || !paraRef.current)
+        return;
 
       gsap.fromTo(
         [titleRef.current, paraRef.current],
-        { y: 60, autoAlpha: 0 },
+        { y: 80, autoAlpha: 0 },
         {
-          y: 0,
+          y: 60,
           autoAlpha: 1,
           ease: "none",
           scrollTrigger: {

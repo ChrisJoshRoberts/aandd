@@ -9,7 +9,7 @@
   z-index: 1000;
   transform: translateX(-50%);
   width: 80%;
-  background-color: #ffffff3d;
+  background-color: #ffffff86;
   padding: 4px 24px;
   border-radius: 100px;
   margin-top: 2rem;
@@ -18,7 +18,7 @@
   transition: background-color 0.3s ease-in-out;
 
   &:hover {
-    background-color: #ffffff74;
+    background-color: #ffffffc5;
   }
 }
 .navLinks {
