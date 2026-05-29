@@ -1,7 +1,6 @@
 "use client";
 import { Service } from "@/types/types";
 import styles from "./ServiceCard.module.css";
-import { CircleArrowOutUpRight } from "lucide-react";
 import { useState } from "react";
 
 export default function ServiceCard({
