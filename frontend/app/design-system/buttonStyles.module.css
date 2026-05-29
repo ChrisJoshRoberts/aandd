@@ -13,3 +13,15 @@
     color: #ffffff;
   }
 }
+.homeHeroButton {
+  background: var(--color-minneola) !important;
+  transform: scale(1.05);
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    background: var(--color-aubergine) !important;
+  }
+}

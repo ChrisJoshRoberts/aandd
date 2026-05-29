@@ -1,9 +1,28 @@
 .homeInfoSection {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
   background-color: var(--color-primary);
   color: var(--color-aubergine);
   height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+}
+.infoTitlesWrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.infoTitle {
+  font-size: 3.5rem;
+  font-family: var(--font-josefin-sans);
+  font-weight: 900;
+  line-height: 0.99;
+}
+.infoText {
+  font-size: 1.25rem;
+  font-family: var(--font-josefin-sans);
+  font-weight: 400;
+  line-height: 1.3;
+  opacity: 0.5;
 }

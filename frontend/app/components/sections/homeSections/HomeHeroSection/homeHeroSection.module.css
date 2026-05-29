@@ -54,18 +54,6 @@
   transform-origin: 0 100%;
   will-change: transform;
 }
-.homeHeroButton {
-  background: var(--color-minneola) !important;
-  transform: scale(1.05);
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease;
-
-  &:hover {
-    transform: scale(1.1);
-    background: var(--color-aubergine) !important;
-  }
-}
 .highlight {
   color: var(--color-minneola);
   filter: drop-shadow(0px 7px 29px var(--color-minneola-light));

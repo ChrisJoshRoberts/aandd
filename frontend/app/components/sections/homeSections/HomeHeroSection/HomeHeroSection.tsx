@@ -122,7 +122,7 @@ export default function HomeHeroSection() {
           expert digital marketing and design solutions that deliver real
           results.
         </p>
-        <Button className={`${buttonStyles.button} ${styles.homeHeroButton}`}>
+        <Button className={`${buttonStyles.button} ${buttonStyles.homeHeroButton}`}>
           Find out more
         </Button>
       </div>
