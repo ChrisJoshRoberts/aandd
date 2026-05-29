@@ -195,3 +195,20 @@
   opacity: 1;
   transform: translateY(0);
 }
+.serviceButtonIcon {
+  width: 44px;
+  height: 44px;
+
+  mask-image: url('/assets/circle_arrow-icon-b.png');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  -webkit-mask-image: url("/assets/circle_arrow-icon-b.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+
+
+  transition: all 0.3s ease-in-out;
+}

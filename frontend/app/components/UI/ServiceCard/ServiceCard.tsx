@@ -40,13 +40,7 @@ export default function ServiceCard({
       <div
         className={` ${styles.serviceButton} ${isCardHovered ? styles.serviceButtonActive : ""}`}
       >
-        <CircleArrowOutUpRight
-          size={44}
-          color={
-            isCardHovered ? "var(--color-minneola)" : "var(--color-aubergine"
-          }
-          strokeWidth={2}
-        />
+        <div className={styles.serviceButtonIcon} style={{ backgroundColor: isCardHovered ? "var(--color-minneola)" : "var(--color-aubergine)" }}></div>
       </div>
     </div>
   );

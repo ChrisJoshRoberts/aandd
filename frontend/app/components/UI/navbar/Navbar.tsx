@@ -41,7 +41,7 @@ export default function Navbar() {
       <Link href="/">
         <Image
           loading="eager"
-          src="/assets/Logo_Aubergine_Bright.png"
+          src="/assets/Logo_Aubergine.png"
           alt="Logo"
           width={80}
           height={80}
