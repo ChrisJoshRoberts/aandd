@@ -84,8 +84,8 @@ export default function ServiceScroll({
           ease: "none",
           scrollTrigger: {
             trigger: titleWrapperRef.current,
-            start: "top 30%",
-            end: "top 25%",
+            start: "top 25%",
+            end: "top 15%",
             scrub: true,
           },
         },
